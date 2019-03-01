@@ -2,7 +2,7 @@
 layout: default
 no_sidebar: true
 title: Software
-group: software
+group: Software
 
 category:
   - name: NFD
@@ -44,52 +44,22 @@ category:
 
 ---
 
-<!-- Nav bar -->
-<ul class="nav nav-pills tabs-iconized" role="tablist">
-  <li class="active"><a href="#overview" role="tab" data-toggle="tab">
-    Software </a>
-  </li>
-  {% for item in page.category %}
-  <li><a href="#{{ item.id }}" role="tab" data-toggle="tab">
-    <!-- <i class="fa {{ item.icon }}"></i> --> {{ item.name }}</a>
-  </li>
-  {% endfor %}
-</ul>
-<!-- END Nav bar-->
-
 <!-- Content -->
-<div class="tab-content">
-  <div class="tab-pane fade in active" id="overview">
-    <div class="overview">
-      {% for item in page.category %}
-        <div class="container">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4><!-- <i class="fa {{ item.icon }}"></i>  -->
-                {{ item.name }}
-              </h4>
-            </div>
-            <div class="panel-body">
-              <!-- {% bibliography --file background --query @*[keywords ~= dis-{{ item.id }}] %} -->
-              <p>{{ item.intro }}</p>
-              {% if item.link != "" %}
-                <p><a href = "{{ item.link }}">(read more)</a></p>
-              {% endif %}
-            </div>
-          </div>
-        </div>
-      {% endfor %}
+{% for item in page.category %}
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-header">
+        <b>{{ item.name }}</b>
+      </div>
+      <div class="card-body">
+        {{ item.intro }}
+        <br/>
+        {% if item.link != "" %}
+          <a href="{{ item.link }}" class="btn btn-primary">Read more</a>
+        {% endif %}
+      </div>
     </div>
   </div>
-  {% for item in page.category %}
-  <div class="tab-pane fade" id="{{ item.id }}">
-    <p> {{ item.intro }} </p>
-    <p>
-        {% if item.link != "" %}
-          <a align="right" href= "{{ item.link }}"> (read more) </a>
-        {% endif %}
-    </p>
-  </div>
-  {% endfor %}
-</div>
+  <br/>
+{% endfor %}
 <!-- END Content -->

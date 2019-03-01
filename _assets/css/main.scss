@@ -1,0 +1,35 @@
+@import "variables";
+
+// bootstrap 4
+@import "bootstrap";
+
+// font-awesome
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+
+@import 'site-styling';
+@import 'navbar';
+@import 'hover-link';
+
+// @import "modules/compass-mixins";
+// @import "modules/breakpoints";
+// @import "modules/mixins";
+
+// // import third-party
+// @import "vendors/slick";
+// @import "vendors/slick-theme-repute";
+// @import "vendors/animate";
+// @import "vendors/bootstrap-multiselect";
+
+// // import web elements
+// @import "partials/navbar";
+// @import "partials/ui-elements";
+// @import "partials/portfolio";
+// @import "partials/blog";
+// @import "partials/typography";
+
+// // import pages styles
+// @import "partials/pages";
+
+// // import helper classes
+// @import "partials/helpers";

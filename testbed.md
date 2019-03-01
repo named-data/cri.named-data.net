@@ -1,10 +1,11 @@
 ---
 layout: default
 title: NDN Testbed
-group: Project Team
+group: Testbed
+
 ---
 
-<img src="{{ site.baseurl }}/assets/img/testbed.png" class="col-md-6 pull-right" style="max-width:150%" />
+{% asset testbed.png class="col-md-6 pull-right" style="max-width:150%" %}
 
 The NDN testbed is a shared community resource that enables global, wide-area NDN research. Each participating member of the testbed commits a local server to act as a managed NDN gateway node. The NDN testbed directly supports the research community by enabling any researcher in the world to connect to the testbed and develop, evaluate, and operate NDN-based applications and services over a global footprint. All of these nodes are centrally managed by the co-PI Crowley and his Washington University team.
 

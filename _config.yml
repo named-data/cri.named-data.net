@@ -6,11 +6,11 @@ highlighter: rouge
 markdown: kramdown
 exclude: ['CNAME', 'Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', '.sass-cache']
 
-gems:
-  - jekyll-compass
+plugins:
+  - jekyll-assets
 
-url: https://philoL.github.io/ndn-cri-websites/
-baseurl: 
+url: https://cri.named-data.net
+baseurl:
 
 # Configuration for site
 title: Building the Core NDN Infrastructure to Advance Information-Centric Networking Research (NDN-CRI)
@@ -19,6 +19,8 @@ author: NDN-CRI Project Team
 email:
 logo:
 
+google_analytics: "UA-22320603-7"
+  
 navbar_list:
 - name: Home
   link: /
@@ -35,22 +37,17 @@ navbar_list:
 - name: Team
   link: team.html
 
-# google_analytics:
-#    account: UA-XXXXX-X
+assets:
+  cache: .sass-cache
 
-# jekyll-scholar configurations
-scholar:
-  style: apa
-  locale: en
-  bibliography_template: pub
+  sources:
+    - _assets/css
+    - _assets/images
+    - _assets/fonts
+    - _assets/js
+    - _assets/bower
 
-  sort_by: year,month
-  order: descending
-
-  source: ./_publications
-  bibliography:
-    - pub.bib
-    - background.bib
-  details_dir: ./publications/details
-  details_layout: details.html
-  #query: "@*[public!=no]"
+  autoprefixer:
+    browsers:
+      - "last 2 versions"
+      - "IE > 9"

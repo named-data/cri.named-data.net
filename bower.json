@@ -1,0 +1,22 @@
+{
+  "name": "ndncri",
+  "authors": [
+    "Alexander Afanasyev <aa@cs.fiu.edu>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "_assets/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}
