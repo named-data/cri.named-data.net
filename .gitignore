@@ -1,3 +1,4 @@
+.travis.d/id-rsa
 _site/
 .sass-cache/
 .jekyll-cache/
